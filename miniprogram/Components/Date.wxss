@@ -8,6 +8,6 @@
     background-color: rgba(255, 179, 0, 0.2);
     padding: 8rpx;
     border-radius: 25rpx;
-    font-size: 22rpx;
+    font-size: 28rpx;
     line-height: 25rpx;
 }

@@ -15,7 +15,7 @@ page{
 
 .btn {
   margin-top: 50rpx;
-  width: 150rpx;
+  width: 180rpx;
   height: 60rpx;
   line-height: 55rpx;
   font-size: 30rpx;

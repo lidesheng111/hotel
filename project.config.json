@@ -10,7 +10,7 @@
 		"autoAudits": false
 	},
 	"appid": "wx06153793fb38ac6b",
-	"projectname": "shangbala",
+	"projectname": "hotel",
 	"libVersion": "2.6.2",
 	"condition": {
 		"search": {
@@ -29,7 +29,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
@@ -46,7 +46,14 @@
 				{
 					"id": -1,
 					"name": "roomdetals",
-					"pathName": "pages/roomDetails/roomDetails"
+					"pathName": "pages/roomDetails/roomDetails",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "cart",
+					"pathName": "pages/cart/cart",
+					"scene": null
 				}
 			]
 		}

@@ -12,7 +12,7 @@
       <view class="date-title">{{outDateWeekDay.length == 0 ? '明天' : week[outDateWeekDay]}}退房</view>
     </Date>
   </view>
-  <button class='btn' wx:if="{{!confirmStay}}" bindtap='onConfirmStay'>确定</button>
+  <button class='btn' wx:if="{{!confirmStay}}" bindtap='onConfirmStay'>确定日期</button>
 </view>
 
 

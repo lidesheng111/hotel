@@ -198,10 +198,7 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked {
   letter-spacing: 5rpx;
   box-shadow: 0 0 5rpx rgba(0, 0, 0, 0.5);
 }
-/* .detail-box-btn {
-  float: left; 
-  display: inline-block;
-} */
+
 .bill-box {
   width: 254rpx;
   font-size: 24rpx;

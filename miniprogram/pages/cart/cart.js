@@ -16,7 +16,7 @@ create(store, {
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      db.collection('order').get().then(res => {
+      db.collection('cart').get().then(res => {
         this.store.data.orderList = res.data;
         this.update();
       })

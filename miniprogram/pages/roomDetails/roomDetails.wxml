@@ -82,23 +82,23 @@
 <view class='guests-info-box'>
   <view class='input-box'>
     <view class='input-title'>联系号码</view>
-    <input class='input' type='number'></input>
+    <input class='input' type='number' bindblur="onInputTel"></input>
   </view>
   <view class='input-box' wx:for="{{roomQuantity}}" wx:key="this">
     <view class='input-title'>房间 {{item}}</view>
-    <input class='input' type='text' placeholder='请填写入住人姓名'></input>
+    <input class='input' type='text' placeholder='请填写入住人姓名' bindblur="onInputName"></input>
   </view>
 </view>
 
 <view class='footer-box'>
   <!-- <button class='btn detail-box-btn' wx:if="{{!confirmStay}}" bindtap='onConfirmStay'>确定</button> -->
-  <cover-view class="bill-box hide">
+  <view class="bill-box hide">
     <view wx:for="{{choosed}}" wx:key="this" decode="{{true}}"><text>{{item.date}}</text>{{quantity}}间 X {{item.rate}}元</view>
     <view wx:if="{{_countS==1}}"><text>朝阳房</text>{{stay}}天 X 30元</view>
     <view wx:if="{{_countO==1}}"><text>吸氧设施</text>{{stay}}天 X 50元</view>
     <view wx:if="{{_countP==1}}"><text>布宫观景房</text>{{stay}}天 X 30元</view>
     <view wx:if="{{_countB==1}}"><text>加床</text>{{stay}}天 X 100元</view>
-  </cover-view>
+  </view>
 
   <view class='footer'>
     <view class='check-in-out-date'>

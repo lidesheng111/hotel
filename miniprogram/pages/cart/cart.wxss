@@ -1,7 +1,7 @@
 cart-box{
     padding-bottom: 100rpx;
 }
-.cart-list{
+/* .cart-list{
     position: relative;
     padding: 20rpx 20rpx 20rpx 285rpx;
     height: 185rpx;
@@ -42,16 +42,7 @@ cart-box{
     width: 250rpx;
     height: 80rpx;
 }
-.cart-list .cart-count-box text{
-    display: inline-block;
-    line-height: 80rpx;
-    text-align: center;
-}
-.cart-count-down,.cart-count-add{
-    font-size: 44rpx;
-    width: 50rpx;
-    height: 100%;
-}
+
 .cart-count-num{
     width: 150rpx;
 }
@@ -64,6 +55,25 @@ cart-box{
     line-height: 80rpx;
     text-align: center;
     font-size: 44rpx;
+} */
+.cart-item {
+    display: flex;
+    font-size: 30rpx;
+}
+checkbox {
+    border-radius: 50%;
+}
+.room-img {
+    width: 463rpx;
+}
+.room-type {
+    font-weight: bold;
+}
+.date {
+    font-size: 26rpx;
+}
+.price {
+    color: #ffb300;
 }
 .cart-footer{
     position: fixed;
