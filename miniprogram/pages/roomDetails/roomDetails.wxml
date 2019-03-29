@@ -1,0 +1,123 @@
+<wxs module="utils" src="./utils.wxs"></wxs>
+
+<swiper autoplay='true'>
+  <swiper-item>
+    <image src="{{roomType.imgHead}}" />
+  </swiper-item>
+  <swiper-item>
+    <image src="{{roomType.imgSecond}}" />
+  </swiper-item>
+</swiper>
+
+<view class='main-box'>
+  <view class='room-info-box'>
+    <view class='room-name'>{{roomType.type}}</view>
+    <view class='room-infos'>{{roomType.infos}}</view>
+    <view class='price-box'>
+      <span class="price-symbol">￥</span>{{rate}}
+    </view>
+  </view>
+
+  <view class='option-box'>
+    <view class="option-item {{current2=='0' ? 'option-item-selected' : ''}}" data-id="0" bindtap='onSelected'>{{roomType.name=='double' || roomType.name=='twin' ? '特色选购' : '房型特色'}}</view>
+    <view class="option-item {{current2=='1' ? 'option-item-selected' : ''}}" data-id="1" bindtap='onSelected'>房型设施</view>
+    <view class="option-item {{current2=='2' ? 'option-item-selected' : ''}}" data-id="2" bindtap='onSelected'>入住须知</view>
+  </view>
+
+  <swiper class='option-swiper' current='{{current2}}' bindchange="onSelected">
+    <swiper-item class='specials'>
+      <checkbox-group bindchange="onChange">
+        <!-- <checkbox bindtap='onPickup' color="#ecf0f1" data-checked='{{pickup}}'> 接机服务 <span class="extra">+150元</span></checkbox>
+      <checkbox bindtap='onDropoff' color="#ecf0f1" data-checked='{{dropoff}}'> 送机服务 <span class="extra">+150元</span></checkbox> -->
+        <checkbox wx:if="{{roomType.name=='twin'}}" value='30' bindtap='onSunny' color="#ecf0f1" checked='{{_sunny}}' data-id='0'> 朝阳房：
+          <span class="promotion">长日照，阳光充足，温暖 </span>
+          <span class="extra">+30元/天</span>
+        </checkbox>
+        <checkbox wx:if="{{roomType.name=='double'}}" value='30' bindtap='onPotala' color="#ecf0f1" data-id='1'> 布宫窗景房：
+          <span class="promotion">感受布达拉宫日景、夜景 </span>
+          <span class="extra">+30元/天</span>
+        </checkbox>
+        <checkbox wx:if="{{roomType.name=='double' || roomType.name=='twin'}}" value='50' bindtap='onOxygen' color="#ecf0f1" data-id='2'> 吸氧设施：
+          <span class="promotion"> 为高原之行添一份保障 </span>
+          <span class="extra">+50元/天</span>
+        </checkbox>
+        <checkbox wx:if="{{roomType.name=='luxuryTwin' || roomType.name=='suite'}}" value='100' color="#ecf0f1" data-id='3' bindtap='onExtraBed'> 加床： 
+          <span class="promotion">超过人数限制需加床 </span>
+          <span class="extra">+100元/天</span>
+        </checkbox>
+      </checkbox-group>
+      <view class='hints'>{{_hints}}</view>
+      <view class='swiper-text' wx:if="{{roomType.name=='trible'||roomType.name=='luxuryTwin'}}">空间宽裕。</view>
+      <view class='swiper-text' wx:if="{{roomType.name=='family'}}">3张床，2个房间。窗户朝阳，温暖舒适。</view>
+      <view class='swiper-text' wx:if="{{roomType.name=='suite'}}">空间宽裕，配有浴缸、供氧设备、高级加湿器。</view>
+    </swiper-item>
+
+    <swiper-item class='facilities-box'>
+      <view class='swiper-text facilities'>
+        <text class='fa fa-wifi'> WIFI</text>
+        <text class='fa fa-phone'> 电话</text>
+        <text class='fa fa-shower'> 淋浴</text>
+        <text class='fa fa-tv'> 电视</text>
+        <text class='fa fa-safe-box'> 保险箱</text>
+        <text class='fa fa-air-condition'> 中央空调</text>
+      </view>
+    </swiper-item>
+
+    <swiper-item class='warn-box'>
+      <view class='swiper-text warn-text'>
+        <view>1.酒店的最早入住时间为12：00，最晚退房时间为14：00。</view>
+        <view>2.酒店对预定的最晚保留时间为入住日的下午6点，如有特殊原因需延迟入住，请提前告诉我们。</view>
+        <view>3.如需取消或更改预定，请至少提前一天。</view>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>
+
+<view class='quantity-box'>
+  <view class='subtract symbol' bindtap="onLess">-</view>
+  <view class='quantity'>{{quantity}}间</view>
+  <view class='add symbol' bindtap="onMore">+</view>
+</view>
+<view class="gap" />
+<view class='guests-info-box'>
+  <view class='input-box'>
+    <view class='input-title'>联系号码</view>
+    <input class='input' type='number'></input>
+  </view>
+  <view class='input-box' wx:for="{{roomQuantity}}" wx:key="this">
+    <view class='input-title'>房间 {{item}}</view>
+    <input class='input' type='text' placeholder='请填写入住人姓名'></input>
+  </view>
+</view>
+
+<view class='footer-box'>
+  <!-- <button class='btn detail-box-btn' wx:if="{{!confirmStay}}" bindtap='onConfirmStay'>确定</button> -->
+  <cover-view class="bill-box hide">
+    <view wx:for="{{choosed}}" wx:key="this" decode="{{true}}"><text>{{item.date}}</text>{{quantity}}间 X {{item.rate}}元</view>
+    <view wx:if="{{_countS==1}}"><text>朝阳房</text>{{stay}}天 X 30元</view>
+    <view wx:if="{{_countO==1}}"><text>吸氧设施</text>{{stay}}天 X 50元</view>
+    <view wx:if="{{_countP==1}}"><text>布宫观景房</text>{{stay}}天 X 30元</view>
+    <view wx:if="{{_countB==1}}"><text>加床</text>{{stay}}天 X 100元</view>
+  </cover-view>
+
+  <view class='footer'>
+    <view class='check-in-out-date'>
+      <view class="box-item">{{checkInDate}}<text class='check-bedge'>进</text></view>
+      <view class="box-item">{{checkOutDate}}<text class='check-bedge'>离</text></view>
+    </view>
+
+    <view>
+      <view class='price-box'>
+        <span class="price-symbol">￥</span>{{total}}
+      </view>
+      <view class='quantity-days'>{{quantity}}间{{stay > 0 ? stay : '?'}}晚</view>
+    </view>
+
+    <view class='show-bill' bindtap="{{utils.showBill}}">{{utils.showBill()}}明细</view>
+
+    <view class='place-order'>
+      <view class='addCart' bindtap='onAddCart'>加入购物车</view>
+      <view class='pay'>直接下单</view>
+    </view>
+  </view>
+</view>

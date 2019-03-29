@@ -1,0 +1,5 @@
+module.exports = {
+  propObserver: function(newValue, oldValue, e, ins) {
+    ins.callMethod('updateRates');
+  }
+}

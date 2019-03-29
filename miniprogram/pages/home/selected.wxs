@@ -1,0 +1,18 @@
+var selected = function(e, ownerInstance) {
+    var i;
+    if (e.type == "tap") {
+        i = e.currentTarget.dataset.id;
+        ownerInstance.callMethod('test', i);
+    } else {
+        i = e.detail.current;
+    }
+    ownerInstance.callMethod('test', i);
+    var comps = ownerInstance.selectAllComponents('.option-item');
+    var i = parseInt(i);
+    comps[i].addClass('option-item-selected');
+    comps[1 - i].removeClass('option-item-selected');
+}
+
+module.exports = {
+    selected: selected,
+}

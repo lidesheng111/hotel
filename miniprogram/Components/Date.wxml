@@ -1,0 +1,6 @@
+<view class='date'>
+    <slot class="date-title"></slot>
+    <picker mode="date" start="{{today}}" fields="day" id='{{num}}' bindchange='onChangeDate'>
+        <view class='date-text'>{{num == 1 ? inDate : outDate}}</view>
+    </picker>
+</view>

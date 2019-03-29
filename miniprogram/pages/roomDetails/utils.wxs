@@ -1,0 +1,12 @@
+var showBill = function(e, ins) {
+  var comp = ins.selectComponent('.bill-box');
+  if (comp.hasClass('hide')) {
+    comp.removeClass('hide');
+  } else {
+    comp.addClass('hide');
+  }
+}
+
+module.exports = {
+  showBill: showBill
+}

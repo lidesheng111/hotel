@@ -1,0 +1,13 @@
+.date {
+    font-size: 28rpx;
+    margin-bottom: 20rpx;
+    margin: auto 0;
+}
+.date-text {
+    color: rgb(87, 107, 179);
+    background-color: rgba(255, 179, 0, 0.2);
+    padding: 8rpx;
+    border-radius: 25rpx;
+    font-size: 22rpx;
+    line-height: 25rpx;
+}

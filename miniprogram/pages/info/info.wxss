@@ -1,0 +1,11 @@
+.hotel-info {
+  position: absolute;
+  bottom: 0;
+  background-color: white;
+  color: #c92a3e;
+}
+.hotel-info view {
+  writing-mode: vertical-lr;
+  display: inline-block;
+  font-size: 26rpx;
+}

@@ -1,0 +1,25 @@
+.service-box {
+    margin-top: 50rpx;
+    /* color: #f47920; */
+    color: #000;
+    padding: 20rpx;
+}
+
+.service-title {
+    margin: 35rpx 0 25rpx;
+    font-size: 34rpx;
+}
+
+.item-title {
+    font-size: 28rpx;
+}
+
+.item-text {
+    font-size: 24rpx;
+    margin: 10rpx 0 20rpx;
+}
+
+.item-text:not(:last-of-type) {
+    padding-bottom: 20rpx;
+    border-bottom: 1rpx solid rgba(255, 252, 247, 0.3);
+}

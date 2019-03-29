@@ -1,0 +1,117 @@
+/* 背景轮播图 */
+.pre-imgs {
+    height: 100%;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+}
+
+/* 头部轮播图 */
+.head-imgs {
+  height: 400rpx;
+}
+.head-img {
+  width: 100%;
+  height: 100%;
+}
+
+
+.option-cards {
+  margin: 30rpx;
+  opacity: 0.8;
+  color: #333227;
+}
+
+
+/* main box */
+.main-box {
+    font-size: 28rpx;
+}
+
+.option-item {
+  display: inline-block;
+  width: 375rpx;
+  height: 105rpx;
+  font-size: 36rpx;
+  text-align: center;
+  line-height: 105rpx;
+}
+
+.btn-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.button {
+    color: #fff;
+    height: 265rpx;
+    line-height: 265rpx;
+    text-align: center;
+    letter-spacing: 5rpx;
+    font-size: 38rpx;
+    font-weight: bold;
+    /* 象牙色 */
+    background-color: #e8cb97;
+    margin: 20rpx;
+    background-repeat: no-repeat;
+  background-size: 100%;
+}
+.room-box {
+  background-image: url("https://shangbalahotel-1256857292.cos.ap-chengdu.myqcloud.com/r_01.jpg");
+}
+.arrive-box {
+  background-image: url("https://shangbalahotel-1256857292.cos.ap-chengdu.myqcloud.com/r_02.jpg");
+}
+.fast-box {
+  background-image: url("https://shangbalahotel-1256857292.cos.ap-chengdu.myqcloud.com/r_03.jpg");
+}
+.food-box {
+  background-image: url("https://shangbalahotel-1256857292.cos.ap-chengdu.myqcloud.com/steak.jpg");
+}
+.overstay-box {
+  background-image: url("https://shangbalahotel-1256857292.cos.ap-chengdu.myqcloud.com/re_01.jpg");
+}
+.leave-box {
+  background-image: url("https://shangbalahotel-1256857292.cos.ap-chengdu.myqcloud.com/re_02.jpg");
+}
+.receipt-box {
+  background-image: url("https://shangbalahotel-1256857292.cos.ap-chengdu.myqcloud.com/re_03.jpg");
+}
+.box-title-room,  .box-title-arrive, .box-title-fast, .box-title-overstay, .box-title-leave, .box-title-receipt {
+  font-size: 32rpx;
+  background-color: rgba(255, 255, 255,0.75);
+  color: #ffb300;
+  padding: 5rpx 15rpx;
+}
+.box-title-food, .box-title-parking {
+  background-color: rgba(255, 179, 0,0.5);
+  padding: 25rpx 55rpx;
+}
+.parking-box {
+  background-image: url("	https://shangbalahotel-1256857292.cos.ap-chengdu.myqcloud.com/parking.jpg");
+}
+
+.contact-info {
+    background-color: #ffb300;
+    padding: 10rpx 17rpx;
+    color: #eee;
+    font-size: 28rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.name {
+    margin-top: 100rpx;
+    color: #fff;
+    font-size: 20rpx;
+    font-weight: bolder;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.tibetan-name {
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}

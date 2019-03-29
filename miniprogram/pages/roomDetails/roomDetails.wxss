@@ -1,0 +1,267 @@
+@import "/lib/font/icon.wxss";
+
+page {
+  font-weight: 400;
+}
+
+swiper {
+  height: 400rpx;
+}
+
+image {
+  width: 100%;
+}
+
+/* main box */
+
+.main-box {
+  padding: 20rpx;
+}
+
+.room-info-box {
+  display: grid;
+  grid-template-columns: 535rpx 180rpx;
+  grid-template-rows: 50rpx 50rpx;
+}
+
+.room-infos {
+  display: flex;
+  font-size: 24rpx;
+  color: #666;
+  line-height: 50rpx;
+}
+
+.room-infos view {
+  margin: 0 5rpx;
+}
+
+.price-box {
+  grid-column: 2/3;
+  grid-row: 1/3;
+  align-self: center;
+  font-size: 42rpx;
+  color: #de0e07;
+}
+
+.price-symbol {
+  font-size: 24rpx;
+}
+
+/* 选项栏 */
+
+.option-box {
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1rpx solid #e3e3e3;
+}
+
+.option-box view {
+  width: 236rpx;
+  text-align: center;
+}
+
+.option-swiper {
+  height: 160rpx;
+  padding: 20rpx;
+}
+
+/* 特色选购 */
+
+checkbox-group {
+  font-size: 26rpx;
+}
+
+checkbox {
+  display: block;
+}
+
+checkbox .wx-checkbox-input {
+  width: 28rpx;
+  height: 28rpx;
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  background: #ffb300;
+}
+
+.promotion {
+  color: #666;
+  font-size: 22rpx;
+}
+
+.extra {
+  color: #de0e07;
+}
+
+.hints {
+  font-size: 22rpx;
+  color: #ffb300;
+  margin-top: 10rpx;
+}
+
+/* 设施 */
+.swiper-text {
+  color: #666;
+  font-size: 30rpx;
+}
+.specials .swiper-text {
+  color:  #ffb300;
+}
+
+.facilities-box {
+    margin: 20rpx 0;
+    font-size: 30rpx;
+}
+
+.facilities {
+  color: #666;
+  margin-top: 5rpx;
+}
+
+.facilities text {
+  margin: 10rpx;
+  font-size: 26rpx;
+}
+
+/* 提醒 */
+.warn-text {
+  font-size: 24rpx;
+}
+
+/* 数量 */
+
+.quantity-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #000;
+  background-color: #ffb300;
+  margin: 0 50rpx;
+  border-radius: 80rpx;
+  height: 80rpx;
+}
+
+.symbol {
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  background-color: white;
+  border-radius: 50rpx;
+}
+
+/* 分隔 */
+
+.gap {
+  margin-top: 50rpx;
+  border-top: 10rpx solid #e3e3e3;
+}
+
+/* 入住人信息 */
+
+.guests-info-box {
+  margin: 25rpx 0rpx 150rpx;
+  /* z-index: -1; */
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  font-size: 34rpx;
+  margin: 20rpx 0;
+  border-bottom: 1rpx solid #e3e3e3;
+}
+.input-placeholder {
+  font-size: 28rpx;
+}
+.input-title {
+  margin-left: 20rpx;
+  width: 200rpx;
+}
+
+/* footer */
+.footer-box {
+  z-index: 1;
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  background-color: #fff;
+  width: 750rpx;
+  height: 110rpx;
+  letter-spacing: 5rpx;
+  box-shadow: 0 0 5rpx rgba(0, 0, 0, 0.5);
+}
+/* .detail-box-btn {
+  float: left; 
+  display: inline-block;
+} */
+.bill-box {
+  width: 254rpx;
+  font-size: 24rpx;
+  padding: 10rpx 25rpx;
+  color: red;
+  background-color: #ffb300;
+}
+.bill-box text {
+  display: inline-block;
+  width: 100rpx;
+  margin-right: 20rpx;
+}
+
+.hide {
+  display: none;
+}
+
+.check-in-out-date {
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
+  font-size: 24rpx;
+  margin-left: 20rpx;
+  letter-spacing: 0.8rpx;
+}
+
+.box-item {
+  /* margin-top: 6rpx; */
+}
+.check-bedge {
+  background-color: red;
+  padding: 2rpx 5rpx;
+  font-size: 18rpx;
+  color: white;
+}
+
+.quantity-days {
+  font-size: 24rpx;
+  color: #ffb300;
+}
+
+.show-bill {
+  font-size: 24rpx;
+  writing-mode: vertical-lr;
+}
+
+.place-order {
+  display: flex;
+  color: #fff;
+  height: 110rpx;
+  background-color: #ffb300;
+  text-align: center;
+  line-height: 110rpx;
+  font-weight: 500;
+}
+.addCart {
+  margin-right: 10rpx;
+  padding: 0 10rpx;
+}
+.pay {
+  background-color: #de0e07;
+  padding: 0 10rpx;
+}

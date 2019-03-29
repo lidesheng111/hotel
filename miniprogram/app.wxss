@@ -1,0 +1,25 @@
+@import "/lib/font/font_awesome.wxss";
+
+page{
+    height: 100%;
+    color: #666562;
+    font-weight: 400;
+    /* font-family: 'Microsoft Yahei'; */
+}
+
+
+.option-item-selected {
+  color: #ffb300;
+  border-bottom: 3rpx solid #ffb300;
+}
+
+.btn {
+  margin-top: 50rpx;
+  width: 150rpx;
+  height: 60rpx;
+  line-height: 55rpx;
+  font-size: 30rpx;
+  border: 1rpx solid #ffb300;
+  color: #ffb300;
+  transition: height 2s ease-in-out;
+}

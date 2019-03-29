@@ -1,0 +1,96 @@
+<wxs module="selected" src="./selected.wxs"></wxs>
+
+<swiper class='pre-imgs' wx-if="{{show}}" autoplay='true'>
+  <swiper-item>
+    <image class="bg" src="cloud://test1009.7465-test1009/shangbala/bg.png" mode='aspectFill' />
+  </swiper-item>
+  <swiper-item>
+    <image class="bg" src="cloud://test1009.7465-test1009/shangbala/vase.jpg" mode='aspectFill' />
+  </swiper-item>
+</swiper>
+
+<view class='contact-info'>
+  <navigator class='location fa fa-map-marker' url='/pages/map/map'> 地图导航</navigator>
+  <text class='fa fa-phone phone' bindtap='onCall'> 0891-6323888</text>
+</view>
+
+<swiper class='head-imgs' autoplay='true'>
+  <swiper-item>
+    <image class='head-img' src="https://shangbalahotel-1256857292.cos.ap-chengdu.myqcloud.com/lobby.jpg" />
+  </swiper-item>
+  <swiper-item>
+    <image class='head-img' src="https://shangbalahotel-1256857292.cos.ap-chengdu.myqcloud.com/building.jpg" />
+  </swiper-item>
+</swiper>
+
+<view class='option-cards'>
+  <view class='option-item option-item-selected' data-id='0' bindtap="{{selected.selected}}">您未入住</view>
+  <view class='option-item' data-id='1' bindtap="{{selected.selected}}">您已入住</view>
+</view>
+
+<view class='main-box'>
+  <swiper current='{{current}}' bindchange='{{selected.selected}}'>
+    <swiper-item class='btn-box not-booked'>
+      <view class='button room-box' bindtap='toRoom'>
+        <text class='box-title-room'>订房</text>
+      </view>
+      <view class='button arrive-box'>
+        <text class='box-title-arrive'>预约到店</text>
+      </view>
+      <view class='button fast-box'>
+        <text class='box-title-fast'>办理闪住</text>
+      </view>
+    </swiper-item>
+    <swiper-item class='btn-box checked-in'>
+      <view class='button overstay-box'><text class='box-title-overstay'>在线续住</text></view>
+      <view class='button leave-box'><text class='box-title-leave'>预约退房</text></view>
+      <view class='button receipt-box'><text class='box-title-receipt'>发票</text></view>
+    </swiper-item>
+  </swiper>
+  <view class='button food-box'>
+    <text class='box-title-food'>酒店美食</text>
+  </view>
+  <view class='button parking-box'>
+    <text class='box-title-parking'>我有车</text>
+  </view>
+</view>
+
+<view class='name'>
+  <view class='place-name'>西藏·拉萨</view>
+  <view class='hotel-name'>香巴拉大酒店</view>
+</view>
+<view class='tibetan-name'>ཤམ་པྷ་ལ་གསོལ་མགྲོན་ཁང།</view>
+
+
+<!-- <view class='name-box'>
+  <view class='hotel-name'>拉萨香巴拉大酒店</view>
+  <view class='welcome'>欢迎您的到来</view>
+</view>
+
+<view class='room-preview'>
+  <view class='title'>今日特价</view>
+  <view class='view-all'>全部房型></view>
+</view>
+
+<view class='discount-rooms'>
+  <view>
+    <image class='discount-img' src='cloud://test1009.7465-test1009/shangbala/normal.jpg' mode='widthFix' />
+    <view class='discount-price'>￥288/晚</view>
+    <view class='discount-name'>普通标间</view>
+  </view>
+  <view>
+    <image class='discount-img' src='cloud://test1009.7465-test1009/shangbala/luxury_twin.jpg' mode='widthFix' />
+    <view class='discount-price'>￥388/晚</view>
+    <view class='discount-name'>豪华标间</view>
+  </view>
+</view>
+
+<view class='nearby'>
+  <view class='title'>附近景点</view>
+  <view class='temples'>
+    <view class='fa fa-camera temple'> 大昭寺</view>
+    <view class='fa fa-camera temple'> 小昭寺</view>
+    <view class='fa fa-camera temple'> 丹杰林寺</view>
+    <view class='fa fa-camera temple'> 布达拉宫</view>
+  </view>
+</view> -->

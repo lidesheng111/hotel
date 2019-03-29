@@ -1,0 +1,20 @@
+{
+    "_openid": "oiRaA4v2fiHkV8mMNoBF-d_OVK1g",
+    "date": "3-22",
+    "twin": { "rate": 288, "remains": 15},
+    "double": { "rate": 288, "remains": 15},
+    "luxuryTwin": { "rate": 488, "remains": 15},
+    "trible": { "rate": 588, "remains": 3},
+    "family": { "rate": 588, "remains": 3},
+    "suite": { "rate":688, "remains": 5}
+}
+{
+    "_openid": "oiRaA4v2fiHkV8mMNoBF-d_OVK1g",
+    "date": "3-23",
+    "twin": { "rate": 288, "remains": 15},
+    "double": { "rate": 288, "remains": 15},
+    "luxuryTwin": { "rate": 488, "remains": 15},
+    "trible": { "rate": 588, "remains": 3},
+    "family": { "rate": 588, "remains": 3},
+    "suite": { "rate":688, "remains": 5}
+}

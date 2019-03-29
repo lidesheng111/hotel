@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/room/room",
+    "pages/roomDetails/roomDetails",
+    "pages/cart/cart",
+    "pages/services/services",
+    "pages/info/info",
+    "pages/user/user",
+    "pages/map/map",
+    "pages/admin/admin"
+  ],
+  "window": {
+    "backgroundColor": "#002dbc",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffb300",
+    "navigationBarTitleText": "香巴拉大酒店",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/services/services",
+        "text": "我需要"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的"
+      }
+    ]
+  }
+}

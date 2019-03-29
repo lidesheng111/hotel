@@ -1,0 +1,29 @@
+<wxs module="newRates" src="./room.wxs"></wxs>
+
+<view class="date-box">
+  <view class="date {{confirmStay?'shadow':''}}">
+    <Date class="box-item" num="{{id[0]}}" bindsend_in_date="getInDate">
+      <view class="date-title">{{inDateWeekDay.length == 0 ? '今天' : week[inDateWeekDay]}}入住</view>
+    </Date>
+    <view class='days-box'>
+      <view wx-if="{{stay.length != 0}}">{{stay > 0 ? stay : '?'}}晚</view>
+    </view>
+    <Date class="box-item" num="{{id[1]}}" bindsend_out_date="getOutDate">
+      <view class="date-title">{{outDateWeekDay.length == 0 ? '明天' : week[outDateWeekDay]}}退房</view>
+    </Date>
+  </view>
+  <button class='btn' wx:if="{{!confirmStay}}" bindtap='onConfirmStay'>确定</button>
+</view>
+
+
+
+<view class='room-list-box' change:prop="{{newRates.propObserver}}" prop="{{checkInDate}}">
+  <view class='room-list' wx:for="{{roomList}}" wx:key='this' data-id="{{item._id}}" bindtap='toRoomDetails'>
+    <image class='room-img' src="{{item.imgHead}}" />
+    <view class='room-infos-box'>
+      <view class='room-name'>{{item.type}}</view>
+      <view class='rate'>￥{{dateRate[item.name].rate}}</view>
+      <view class='room-infos'>{{item.infos}} </view>
+    </view>
+  </view>
+</view>
