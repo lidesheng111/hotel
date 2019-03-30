@@ -94,10 +94,19 @@ const datesBetween = function(checkInDate, checkOutDate) {
     //   }
 }
 
+const sum = (arr) => {
+    var sum = 0;
+    arr.forEach(item => {
+        sum += Number(item);
+    })
+    return sum;
+}
+
 module.exports = {
     showToast,
     formateDate,
     datesBetween,
+    sum
     // updateRatesTotal
 }
 

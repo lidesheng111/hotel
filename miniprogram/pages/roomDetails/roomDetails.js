@@ -99,7 +99,7 @@ create(store, {
 
     // 计算特殊选购价格之和
     onChange(e) {
-        this.store.data.extra = this._sum(e.detail.value);
+        this.store.data.extra = utils.sum(e.detail.value);
         this.update();
     },
     _sum(arr) {

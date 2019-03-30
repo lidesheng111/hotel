@@ -72,19 +72,6 @@ checkbox-group {
   font-size: 26rpx;
 }
 
-checkbox {
-  display: block;
-}
-
-checkbox .wx-checkbox-input {
-  width: 28rpx;
-  height: 28rpx;
-}
-
-checkbox .wx-checkbox-input.wx-checkbox-input-checked {
-  background: #ffb300;
-}
-
 .promotion {
   color: #666;
   font-size: 22rpx;
