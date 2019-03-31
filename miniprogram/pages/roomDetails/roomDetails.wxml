@@ -55,11 +55,11 @@
     <swiper-item class='facilities-box'>
       <view class='swiper-text facilities'>
         <text class='fa fa-wifi'> WIFI</text>
-        <text class='fa fa-phone'> 电话</text>
+        <text class='fa fa-zuoji'> 电话</text>
         <text class='fa fa-shower'> 淋浴</text>
         <text class='fa fa-tv'> 电视</text>
-        <text class='fa fa-safe-box'> 保险箱</text>
-        <text class='fa fa-air-condition'> 中央空调</text>
+        <text class='fa fa-safebox'> 保险箱</text>
+        <text class='fa fa-aircondition'> 中央空调</text>
       </view>
     </swiper-item>
 

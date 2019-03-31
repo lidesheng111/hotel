@@ -1,4 +1,3 @@
-@import "/lib/font/icon.wxss";
 
 page {
   font-weight: 400;

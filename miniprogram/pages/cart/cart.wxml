@@ -5,7 +5,7 @@
             <view class="cart-item" wx:for="{{orderList}}" wx:key="{{index}}">
                 <view class='operation-box'>
                     <checkbox color="#ecf0f1" value='{{item.total}}' checked='{{selected}}'></checkbox>
-                    <view class='delete' bindtap='onDelete' data-id="{{item._id}}">X</view>
+                    <view class='delete fa fa-delete' bindtap='onDelete' data-id="{{item._id}}"></view>
                 </view>
                 <image class="room-img" src="{{item.roomImg}}" mode='widthFix'></image>
                 <view class='order-info'>
@@ -28,7 +28,7 @@
                 <checkbox value='all' checked='{{allSelected}}'>全选</checkbox>
             </checkbox-group>
             <view style='font-size: 36rpx'>需支付  <text class="price">￥{{orderTotal}}</text></view>
-            <view>—></view>
+            <view class='fa fa-next'></view>
         </view>
     </view>
 

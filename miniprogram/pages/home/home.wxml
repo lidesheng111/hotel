@@ -10,8 +10,8 @@
 </swiper>
 
 <view class='contact-info'>
-  <navigator class='location fa fa-map-marker' url='/pages/map/map'> 地图导航</navigator>
-  <text class='fa fa-phone phone' bindtap='onCall'> 0891-6323888</text>
+  <navigator class='location fa fa-address' url='/pages/map/map'>地图导航</navigator>
+  <text class='fa fa-callout' bindtap='onCall'>0891-6323888</text>
 </view>
 
 <swiper class='head-imgs' autoplay='true'>
