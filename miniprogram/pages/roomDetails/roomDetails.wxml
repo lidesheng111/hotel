@@ -85,8 +85,8 @@
     <input class='input' type='number' bindblur="onInputTel"></input>
   </view>
   <view class='input-box' wx:for="{{roomQuantity}}" wx:key="this">
-    <view class='input-title'>房间 {{item}}</view>
-    <input class='input' type='text' placeholder='请填写入住人姓名' bindblur="onInputName"></input>
+    <view class='input-title fa fa-user'> 入住人</view>
+    <input class='input' type='text' placeholder='房间 {{item}}' bindblur="onInputName"></input>
   </view>
 </view>
 
