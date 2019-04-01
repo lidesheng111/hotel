@@ -9,9 +9,9 @@
                 </view>
                 <image class="room-img" src="{{item.roomImg}}" mode='widthFix'></image>
                 <view class='order-info'>
-                    <text>[{{item.quantity}}]间 </text><text class="room-type"> {{item.roomType}}</text>
-                    <view class='date'>{{item.checkInDate}} 至 {{item.checkOutDate}}</view>
-                    <view>宿 [{{item.stay}}]晚</view>
+                    <text style='font-size:24rpx'>[{{item.quantity}}]间 </text><text class="room-type"> {{item.roomType}}</text>
+                    <view class='date'>[{{item.stay}}]晚 {{item.checkInDate}} 至 {{item.checkOutDate}}</view>
+                    <view style='font-size:24rpx' wx:for="{{item.extraArr}}" wx:for-item="extra" wx:key="this">{{extra.item}}</view>
                     <view>总价 <text class='price'>RMB {{item.total}}</text></view>
                     <scroll-view scroll-x style="white-space: nowrap; background: #fff;"><view class='for-who'>{{item.forWho}}</view></scroll-view>
                 </view>
