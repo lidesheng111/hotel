@@ -3,6 +3,7 @@
     "pages/home/home",
     "pages/room/room",
     "pages/roomDetails/roomDetails",
+    "pages/parking/parking",
     "pages/cart/cart",
     "pages/services/services",
     "pages/info/info",

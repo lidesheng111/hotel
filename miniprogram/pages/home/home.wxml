@@ -50,9 +50,9 @@
   <view class='button food-box'>
     <text class='box-title-food'>酒店美食</text>
   </view>
-  <view class='button parking-box'>
+  <navigator class='button parking-box' url='/pages/parking/parking'>
     <text class='box-title-parking'>我有车</text>
-  </view>
+  </navigator>
 </view>
 
 <view class='name'>

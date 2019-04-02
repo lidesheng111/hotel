@@ -29,7 +29,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 3,
+			"current": 4,
 			"list": [
 				{
 					"id": -1,
@@ -53,6 +53,14 @@
 					"id": -1,
 					"name": "cart",
 					"pathName": "pages/cart/cart",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "parking",
+					"pathName": "pages/parking/parking",
+					"query": "",
 					"scene": null
 				}
 			]

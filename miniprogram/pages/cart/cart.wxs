@@ -1,0 +1,9 @@
+var onChecked = function(e, ins) {
+  console.log(JSON.stringify(e));
+  return !e;
+
+}
+
+module.exports = {
+  onChecked: onChecked
+}

@@ -1,0 +1,9 @@
+<view class="main-box">
+  <view class='getting'>
+    <view class="tip">预定房间后，可在此处输入您的车牌号领取酒店停车券</view>
+    <view class='tickets-box'>
+      <view class='plate-number'>车牌号</view>
+      <input>车牌号</input>
+    </view>
+  </view>
+</view>

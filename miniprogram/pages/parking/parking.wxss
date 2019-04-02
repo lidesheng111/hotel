@@ -1,0 +1,18 @@
+.main-box{
+  padding: 20rpx;
+}
+
+.getting {
+  font-size: 28rpx;
+}
+.tip {
+  background-color: #ffb300;
+  color: #fff;
+  padding: 5rpx 15rpx;
+}
+.tickets-box {
+  box-shadow: 2rpx 5rpx 5rpx 10rpx rgba(0,0,0);
+  width: 286rpx;
+  margin: 0 auto;
+  border: 1rpx solid #ffb300;
+}

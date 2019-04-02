@@ -75,7 +75,7 @@ cart-box {
   display: grid;
   /* align-items: center;
   justify-content: space-around; */
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 250rpx 250rpx 250rpx;
   align-items: center;
   justify-items: center;
 }
