@@ -29,8 +29,8 @@
       <checkbox-group bindchange="onSelectAll">
         <checkbox value='all' checked='{{allSelected}}'>全选</checkbox>
       </checkbox-group>
-      <view style='font-size: 36rpx'>需支付 <text class="price">￥{{orderTotal}}</text></view>
-      <view class='fa fa-next'></view>
+      <view style='font-size: 36rpx'>需支付 <text class="price">￥{{selectedTotal}}</text></view>
+      <view class='fa fa-next' bindtap='onPay'></view>
     </view>
   </view>
 

@@ -21,7 +21,17 @@ const retrieveRates = async function (date) {
   })
 }
 
+// 获取已支付订单
+const retrieveCart = async function() {
+  return await db.collection('cart').where({
+    paid: true
+  }).get().then(res => {
+    return res.data
+  })
+}
+
 module.exports = {
   retrieveRoomTypes,
   retrieveRates,
+  retrieveCart
 }

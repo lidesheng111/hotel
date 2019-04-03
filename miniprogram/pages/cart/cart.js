@@ -11,9 +11,10 @@ create(store, {
    */
   data: {
     orderList: '',
-    orderTotal: 0,
+    selectedTotal: 0,
     allSelected: false,
     selected: false,
+    selectedId: [],
     allTotal: 0,
     count: 0
   },
@@ -26,7 +27,9 @@ create(store, {
   },
 
   _retrieveCart() {
-    db.collection('cart').get().then(res => {
+    db.collection('cart').where({
+      paid: false
+    }).get().then(res => {
       // 订单数量
       this.update({
         count: res.data.length
@@ -39,6 +42,21 @@ create(store, {
       })
       this.store.data.orderList = res.data;
       this.update();
+
+      // res.data.forEach(item => {
+      //   if (item.paid) {
+      //     console.log(item)
+      //     db.collection('order').add({
+      //       data: {paid: item},
+      //       success: res => {
+      //         console.log(res, 'order')
+      //       },
+      //       fail: err => {
+      //         console.error(err)
+      //       }
+      //     })
+      //   }
+      // })
 
       wx.setStorage({
         key: 'cart',
@@ -61,7 +79,8 @@ create(store, {
 
     // 更新总价
     this.update({
-      orderTotal: 0
+      selectedTotal: 0,
+      selectedId: e.detail.value
     })
 
     wx.getStorage({
@@ -69,23 +88,14 @@ create(store, {
       success: res => {
         console.log(res, 'st');
         var array = res.data;
-        array.filter(item => e.detail.value.includes(item._id));
-        console.log(array, 'arr')
+        var filteredArray = array.filter(item => e.detail.value.includes(item._id));
+        filteredArray.forEach(one => {
+          this.update({
+            selectedTotal: this.data.selectedTotal + one.total
+          })
+        })
       },
-      // https://www.hellojava.com/a/55126.html
     })
-    // e.detail.value.forEach(id => {
-    //   db.collection('cart').doc(id).get().then(res => {
-    //     console.log(res)
-    //     // this.update({
-    //     //   orderTotal: this.data.orderTotal + res.data.total
-    //     // })
-    //     wx.setStorage({
-    //       key: 'cart',
-    //       data: res.data
-    //     })
-    //   })
-    // })
   },
   onCountsTotal(e) {
     console.log(e)
@@ -100,12 +110,12 @@ create(store, {
     if (e.detail.value.length == 0) {
       this.update({
         selected: false,
-        orderTotal: 0
+        selectedTotal: 0
       })
     } else {
       this.update({
         selected: true,
-        orderTotal: this.data.allTotal
+        selectedTotal: this.data.allTotal
       })
     }
   },
@@ -120,6 +130,19 @@ create(store, {
       allTotal: 0
     })
     this._retrieveCart();
+  },
+
+  onPay() {
+    this.data.selectedId.forEach(id => {
+      db.collection('cart').doc(id).update({
+        data: {
+          paid: true
+        },
+        success: res => {
+          console.log(res)
+        }
+      })
+    })
   },
 
   onReady: function() {

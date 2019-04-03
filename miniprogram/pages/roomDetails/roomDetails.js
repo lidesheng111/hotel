@@ -239,7 +239,8 @@ create(store, {
                     total: this.store.data.total,
                     paid: false,
                     tel: this.data._tel,
-                    forWho: this.data._forWho
+                    forWho: this.data._forWho,
+                    valid: true
                 },
                 success: res => {
                     console.log(res)
