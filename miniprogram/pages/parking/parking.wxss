@@ -1,3 +1,10 @@
+.tip-parking {
+  font-size: 30rpx;
+  text-align: center;
+  margin-top: 200rpx;
+  color: #ffb300;
+}
+
 .main-box{
   padding: 20rpx;
 }
@@ -15,4 +22,23 @@
   width: 286rpx;
   margin: 0 auto;
   border: 1rpx solid #ffb300;
+  display: grid;
+  grid-template-columns: 286rpx 70rpx;
+  grid-template-rows: 52rpx 52rpx;
+}
+.plate-number {
+  height: 52rpx;
+  background-color: #ffb300;
+  color: #fff;
+  text-align: center;
+  line-height: 52rpx;
+}
+.submit {
+  grid-row: span 2;
+  background-color: rgb(169, 169, 247);
+  writing-mode: vertical-lr;
+  text-align: center;
+  line-height: 70rpx;
+  color: #ffb300;
+  display: inline-block;
 }

@@ -1,18 +1,54 @@
-// pages/parking/parking.js
-Page({
+const db = wx.cloud.database();
+const utils = require('../../utils/utils.js');
+
+const create = require('../../utils/create.js');
+const store = require('../../store.js');
+
+create(store, {
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    parkingOrder: [],
+    qualified: true,
+    formHide: false,
+    plateNumber: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    db.collection('cart').where({
+      valid: true,
+      paid: true
+    }).get().then(res => {
+      console.log(res);
+      if (res.data.length == 0) {
+        this.update({
+          qulified: false
+        })  
+      } else {
+        this.update({
+          parkingOrder: res.data
+        })
+      }
+    }).catch(err => {
+      console.error(err)
+    })
+  },
 
+  getPlate(e) {
+    this.update({
+      plateNumber: e.detail.value
+    })
+  },
+
+  onSubmit() {
+    this.update({
+      formHide: true
+    })
   },
 
   /**

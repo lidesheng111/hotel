@@ -43,21 +43,6 @@ create(store, {
       this.store.data.orderList = res.data;
       this.update();
 
-      // res.data.forEach(item => {
-      //   if (item.paid) {
-      //     console.log(item)
-      //     db.collection('order').add({
-      //       data: {paid: item},
-      //       success: res => {
-      //         console.log(res, 'order')
-      //       },
-      //       fail: err => {
-      //         console.error(err)
-      //       }
-      //     })
-      //   }
-      // })
-
       wx.setStorage({
         key: 'cart',
         data: res.data

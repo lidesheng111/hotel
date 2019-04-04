@@ -1,6 +1,7 @@
 const store = require('../../store.js');
 const create = require('../../utils/create.js');
 const app = getApp();
+const db = wx.cloud.database();
 const utils = require("../../utils/utils.js");
 const api = require('../../utils/api.js');
 
@@ -29,14 +30,23 @@ create(store, {
 
   onLoad() {
     api.retrieveCart().then(res => {
-      console.log(res);
       var today = new Date();
+      var year = today.getFullYear();
       res.forEach(one => {
-        var checkDate = new Date(one.checkOutDate);
-        if(checkDate < today) {
-          console.log('过期');
-        }else {
-          console.log('valid')
+        var checkOutDate = String(year) + '-' + one.checkOutDate;
+        var checkDate = new Date(checkOutDate);
+        // 判断是否过期
+        if (checkDate < today) {
+          db.collection('cart').doc(one._id).update({
+            data: {
+              valid: false
+            },
+          })
+
+          // 过期超过7天，删除记录
+          if ((today.getTime()-checkDate.getTime())/86400000 > 2) {
+            db.collection('cart').doc(one._id).remove();
+          }
         }
       })
     })
