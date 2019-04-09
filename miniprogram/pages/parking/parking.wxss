@@ -8,37 +8,37 @@
 .main-box{
   padding: 20rpx;
 }
-
-.getting {
-  font-size: 28rpx;
-}
-.tip {
-  background-color: #ffb300;
-  color: #fff;
-  padding: 5rpx 15rpx;
-}
-.tickets-box {
-  box-shadow: 2rpx 5rpx 5rpx 10rpx rgba(0,0,0);
-  width: 286rpx;
-  margin: 0 auto;
-  border: 1rpx solid #ffb300;
-  display: grid;
-  grid-template-columns: 286rpx 70rpx;
-  grid-template-rows: 52rpx 52rpx;
+.input-box {
+  width: 500rpx;
+  margin: 200rpx auto;
 }
 .plate-number {
   height: 52rpx;
-  background-color: #ffb300;
+  background-color: #de452c;
   color: #fff;
   text-align: center;
   line-height: 52rpx;
 }
-.submit {
-  grid-row: span 2;
-  background-color: rgb(169, 169, 247);
-  writing-mode: vertical-lr;
+.input-plate {
+  border: 1rpx solid #de452c;
+}
+.submit-btn {
+  width: 300rpx;
+  margin-top: 200rpx;
+  background-color: rgb(255, 255, 255);
   text-align: center;
   line-height: 70rpx;
-  color: #ffb300;
-  display: inline-block;
+  color: #de452c;
+  border: 1rpx solid #de452c;
+}
+
+/* 停车券 */
+.plate-card {
+  width: 600rpx;
+  margin: 200rpx auto;
+  text-align: center;
+  /* border: 1rpx solid #de452c; */
+  background-color: #de452c;
+  color: white;
+  padding: 50rpx 0;
 }

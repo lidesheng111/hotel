@@ -1,14 +1,17 @@
 <view wx:if="{{!qualified}}" class='tip-parking'>先去预定房间吧</view>
 
 <view wx:else class="main-box">
-  <view wx:if="!formHide" class='tickets-box' bindsubmit="formSubmit">
-    <view class='plate-number'>车牌号</view>
-    <view class='submit' bindtap='onSubmit'>提交</view>
-    <input bindblur="getPlate">车牌号</input>
-  </view>
+  <form class='tickets-box' wx:if="{{!formHide}}" bindsubmit="onSubmit">
+    <view class='input-box'>
+      <view class='plate-number'>车牌号</view>
+      <input class='input-plate' bindblur="getPlate">车牌号</input>
+    </view>
 
-  <view wx:for="{{parkingOrder}}">
-    <view>香巴拉大酒店停车券</view>
+    <button class='submit-btn' form-type="submit">领取停车票</button>
+  </form>
+
+  <view wx:if="{{formHide}}" class='plate-card' wx:for="{{parkingOrder}}" wx:key="this">
+    <view style='font-size: 50rpx'>香巴拉大酒店停车券</view>
     <view>车牌号: {{plateNumber}}</view>
     <view>使用期限：{{item.checkInDate}} - {{item.checkOutDate}}</view>
   </view>
